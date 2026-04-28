@@ -3,25 +3,25 @@
 A simple command-line banking application written in Python that supports balance management and KYC (Know Your Customer) document tracking. Designed for learning purposes, it demonstrates basic financial logic, input validation, and in-memory state management.
 
 ## Features
-1.Balance Management
+### 1.Balance Management:
 View your current account balance at any time
 Deposit any positive amount into your account
 Withdraw funds with built-in validation — the app rejects zero/negative amounts and prevents overdrafts
 
-2.KYC (Know Your Customer)
+### 2.KYC (Know Your Customer):
 Store identity documents as flexible key-value pairs (e.g. name: John Doe, id_number: AB123456)
 View all stored KYC records in a formatted list
 Update or add new KYC entries at any time — existing keys are overwritten, new ones are appended
 
-3.Input Validation
+### 3.Input Validation:
 Deposits: rejects zero and negative amounts with a clear error message
 Withdrawals: rejects invalid amounts and blocks transactions that would overdraw the account
 Menu: handles unrecognised input gracefully and re-displays the menu
 
 ## How to Run
-Step 1 — Make sure Python 3.13 is installed
-Step 2 — Save the source code to a file named banking_app.py.
-Step 3 — Run the application: 'python code.py'
+1. Make sure Python 3.13 is installed
+2. Save the source code to a file named banking_app.py.
+3. Run the application: 'python code.py'
 
 ## Algorithm
 The application runs on a single while True loop that reads user input and routes it to the appropriate function. Below is the step-by-step logic for each operation.
