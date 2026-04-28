@@ -81,8 +81,8 @@ The application runs on a single while True loop that reads user input and route
      4. Print "KYC updated"
      5. END
 
-## limitaions 
-1.All balance and KYC data is held in memory. Quitting the app erases everything.There is no data persistence
-2.Deposit and withdrawal amounts are parsed with int(). Entering 50.5 will raise a ValueError and crash the app.
-3.Completed deposits and withdrawals are not logged or retrievable.
-4.Non-numeric input at an amount prompt crashes the app instead of showing an error message.
+## limitations 
+   1. All balance and KYC data is held in memory. Quitting the app erases everything.There is no data persistence
+   2. Completed deposits and withdrawals are not logged or retrievable.
+   3. Deposit and withdrawal amounts are parsed with int(). Entering 50.5 will raise a ValueError and crash the app.
+   4. There is no concept of accounts, sessions, or authentication. One balance and one KYC store exist for the lifetime of the process.
