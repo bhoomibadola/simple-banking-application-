@@ -26,60 +26,61 @@ Step 3 — Run the application: 'python code.py'
 ## Algorithm
 The application runs on a single while True loop that reads user input and routes it to the appropriate function. Below is the step-by-step logic for each operation.
 
-1.Main Loop
-   1. Print welcome banner
-   2. LOOP forever:
+### 1.Main Loop
+  1. Print welcome banner
+  2. LOOP forever:
      a. Display menu options 1–6
      b. Read user choice
      c. Route to matching operation (see below)
      d. If choice is 6  →  break loop
      e. If choice is unrecognised  →  print error, continue
-   3. Print farewell message
-   4. END
-2.Deposit Algorithm
-   1. Prompt user for amount
-   2. IF amount > 0:
+  3.  Print farewell message
+  4.  END
+   
+### 2.Deposit Algorithm
+  1. Prompt the user for amount
+  2. IF amount > 0:
      a. balance = balance + amount
      b. Print "Amount deposited: {amount}"
-    3. ELSE:
-     a. Print "Cannot deposit negative or zero amount"
-    4. END
-
-3.Withdrawal Algorithm
-    1. Prompt user for amount
-    2. IF amount <= 0:
+  3. IF amount > 0:
+     a. balance = balance + amount
+     b. Print "Amount deposited: {amount}"
+  4. END 
+### 3.Withdrawal Algorithm
+  1. Prompt user for amount
+  2. IF amount <= 0:
      a. Print "Cannot withdraw negative or zero amount"
      b. END
-     3. ELSE IF amount > balance:
+  3.  ELSE IF amount > balance:
      a. Print "Cannot withdraw. Insufficient funds"
      b. END
-    4. ELSE:
+  4. ELSE:
      a. balance = balance - amount
      b. Print "Amount withdrawn: {amount}"
-     5. END
+  5. END
 
-4. Balance Check Algorithm
-    1. Print "Your balance is {balance}"
-    2. END
+### 4. Balance Check Algorithm
+   1. Print "Your balance is {balance}"
+   2. END
 
-5.KYC Check Algorithm
-    1. IF kyc_document is empty:
+### 5.KYC Check Algorithm
+  1. IF kyc_document is empty:
      a. Print "No KYC document"
-    2. ELSE:
+  2. ELSE:
      a. FOR each key in kyc_document:
           i. Print "KYC {key}: {value}"
-     3. END
+   3. END
 
-6.KYC Update Algorithm
-    1. Prompt user for number of documents (n)
-    2. FOR i in range(n):
+### 6.KYC Update Algorithm
+  1. Prompt user for number of documents (n)
+  2. FOR i in range(n):
      a. Prompt for key
      b. Prompt for value
      c. Store key-value pair in temporary dict
-    3. Merge temporary dict into kyc_document
+  3. Merge temporary dict into kyc_document
      (existing keys are overwritten; new keys are added)
-     4. Print "KYC updated"
-     5. END
+  4. Print "KYC updated"
+  5. END
 
 ## limitations 
    1. All balance and KYC data is held in memory. Quitting the app erases everything.There is no data persistence
